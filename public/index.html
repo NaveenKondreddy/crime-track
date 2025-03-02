@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crime Track - View Reported Crimes</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- For icons -->
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">Crime Track</div>
+      <nav>
+        <a href="#report" onclick="openReportModal()">Report</a>
+        <a href="reported-crimes.html">Reported Crimes</a>
+        <a href="#awareness">Awareness</a>
+        <a href="#safety">Safety</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>We Protect Your Community</h1>
+      <p>Join our effort to enhance safety by reporting crimes 24/7. Together, we uphold justice!</p>
+      <button class="submit-tip" onclick="openReportModal()">Submit a Tip</button>
+    </div>
+    <div class="hero-image">
+      <img src="https://cdn.abcotvs.com/dip/images/5967563_022520-kgo-public-safety-img.jpg" alt="Community Safety and Law Enforcement">
+    </div>
+  </section>
+
+  <!-- Modal for Reporting -->
+  <div id="reportModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+      <h2>Report a Crime</h2>
+      <form id="crimeForm">
+        <input type="text" name="title" placeholder="Crime Title" required><br>
+        <textarea name="description" placeholder="Description" required></textarea><br>
+        <input type="text" name="location" placeholder="Location" required><br>
+        <input type="date" name="date" required><br>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="response"></div>
+    </div>
+  </div>
+
+  <!-- Awareness & Education Section -->
+  <section id="awareness" class="awareness-section">
+    <h2>Crime Awareness & Education</h2>
+    <p>Learn about crimes and legal actions to protect your community.</p>
+    <div class="awareness-grid">
+      <div class="awareness-item">
+        <img src="https://th.bing.com/th/id/OIP.U4O1lzUs0s3thncQ-Dh6BQHaFF?rs=1&pid=ImgDetMain" alt="Theft Scene">
+        <h3>Theft</h3>
+        <p>Unauthorized taking of property. Report with details.</p>
+      </div>
+      <div class="awareness-item">
+        <img src="https://shorylaw.com/wp-content/uploads/2022/08/Assault.png" alt="Assault Awareness">
+        <h3>Assault</h3>
+        <p>Physical attack. Seek help and report immediately.</p>
+      </div>
+      <div class="awareness-item">
+        <img src="https://th.bing.com/th/id/OIP.X0-Y4DuOJWb43La0w_2jFgHaFA?rs=1&pid=ImgDetMain" alt="Fraud Documents">
+        <h3>Fraud</h3>
+        <p>Deceptive practices. Contact legal aid.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Tips Section -->
+  <section id="safety" class="safety-section">
+    <h2>Safety Tips</h2>
+    <div class="safety-grid">
+      <div class="safety-item">
+        <img src="https://th.bing.com/th/id/OIP.nmshXCnbtD2T95tVSozpBAHaE5?rs=1&pid=ImgDetMain" alt="Security Camera">
+        <p>Install security cameras.</p>
+      </div>
+      <div class="safety-item">
+        <img src="https://th.bing.com/th/id/OIP.9TfEdJo2rsPGklkLmxpRxgHaEK?rs=1&pid=ImgDetMain" alt="Community Awareness">
+        <p>Stay aware of your surroundings.</p>
+      </div>
+      <div class="safety-item">
+        <img src="https://th.bing.com/th/id/OIP.Tafho8TAzwvlIy1q61A6jQHaGC?rs=1&pid=ImgDetMain" alt="Emergency Phone">
+        <p>Keep emergency contacts handy.</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

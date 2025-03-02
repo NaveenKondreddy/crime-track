@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crime Track - Reported Crimes</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- For icons -->
+  <style>
+    .description-cell {
+      max-width: 300px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .expand-btn {
+      background: none;
+      border: none;
+      color: #0066cc;
+      cursor: pointer;
+      font-size: 0.9em;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">Crime Track</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#report" onclick="openReportModal()">Report</a>
+        <a href="index.html#awareness">Awareness</a>
+        <a href="index.html#safety">Safety</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Reported Crimes Table Section -->
+  <section class="reported-crimes-table">
+    <h2>Reported Crimes</h2>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search by Title or Location">
+      <button onclick="searchCrimes()"><i class="fas fa-search"></i></button>
+      <button onclick="resetSearch()">Reset</button>
+    </div>
+    <table id="crimeTable">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Location</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody id="crimeTableBody"></tbody>
+    </table>
+    <button onclick="window.location.href='index.html'">Back</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
