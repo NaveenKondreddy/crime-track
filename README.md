@@ -9,7 +9,7 @@
 6. [API Documentation](#api-documentation)
 7. [Installation and Setup](#installation-and-setup)
 8. [User Guide](#user-guide)
-9. [Known Issues and Future Enhancements](#known-issues-and-future-enhancements)
+9. [Future Enhancements](#future-enhancements)
 
 ## Project Overview
 
@@ -286,13 +286,6 @@ Retrieves all reported crimes.
 2. Enter a search term related to crime title or location
 3. Click the search button to filter the results
 4. Click "Reset" to clear the search and show all crimes again
-
-## Known Issues and Future Enhancements
-
-### Known Issues
-- The API endpoint for crime submission (`/api/submit-crime`) returns a 404 error and needs to be updated to match the defined routes
-- Form validation on the client side is minimal and should be enhanced
-- No authentication system is currently implemented
 
 ### Future Enhancements
 1. **User Authentication**
